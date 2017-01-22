@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="example.com.mysimplenews.MainActivity">
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include android:id="@+id/app_bar"
+            layout="@layout/layout_appbar">
+        </include>
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appbar"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        </FrameLayout>
+    </android.support.design.widget.CoordinatorLayout>
+<android.support.design.widget.NavigationView
+    android:id="@+id/navigationview"
+    app:menu="@menu/nav_menu"
+    android:layout_gravity="start"
+    app:headerLayout="@layout/nav_header"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>

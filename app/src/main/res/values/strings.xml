@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MySimpleNews</string>
+    <string name="action_setting">setting</string>
+    <string name="nav_news">新闻</string>
+    <string name="nav_photo">图片</string>
+    <string name="nav_weather">天气</string>
+    <string name="nav_about">关于</string>
+
+    <string name="nav_nickname">Jacob</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+</resources>

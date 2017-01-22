@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ToolBarStyle">
+        <item name="android:paddingTop">@dimen/padding_top</item>
+        <item name="android:background">@color/brown_normal</item>
+        <item name="android:elevation">5dp</item>
+
+    </style>
+
+</resources>
