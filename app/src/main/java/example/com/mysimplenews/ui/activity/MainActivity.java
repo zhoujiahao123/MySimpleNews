@@ -39,6 +39,7 @@ public class MainActivity extends BaseActivity implements MainView{
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         init();
+        showNews();
     }
     private void init(){
         setSupportActionBar(toolbar);
@@ -64,7 +65,7 @@ public class MainActivity extends BaseActivity implements MainView{
 
     @Override
     public void showNews() {
-
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,)
     }
 
     @Override
