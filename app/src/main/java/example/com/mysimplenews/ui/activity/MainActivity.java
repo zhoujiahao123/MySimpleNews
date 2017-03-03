@@ -2,6 +2,7 @@ package example.com.mysimplenews.ui.activity;
 
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -16,6 +17,7 @@ import example.com.mysimplenews.app.BaseActivity;
 import example.com.mysimplenews.model.mainmodel.MainModelImpl;
 import example.com.mysimplenews.presenter.mainpresenter.MainPresenter;
 import example.com.mysimplenews.presenter.mainpresenter.MainPresenterImpl;
+import example.com.mysimplenews.ui.fragment.NewsFragment;
 import example.com.mysimplenews.ui.view.MainView;
 
 /**
@@ -34,13 +36,14 @@ public class MainActivity extends BaseActivity implements MainView{
     private MainPresenter presenter;
 
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         init();
         showNews();
     }
+
     private void init(){
         setSupportActionBar(toolbar);
         navigationView = (NavigationView) findViewById(R.id.navigationview);
@@ -65,7 +68,8 @@ public class MainActivity extends BaseActivity implements MainView{
 
     @Override
     public void showNews() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,)
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,new NewsFragment()).commit();
+        toolbar.setTitle("新闻");
     }
 
     @Override
